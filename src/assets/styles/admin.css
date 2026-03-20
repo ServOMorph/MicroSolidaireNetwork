@@ -1,0 +1,464 @@
+/* ============================================
+   ADMIN - Styles mode admin et console
+   ============================================ */
+
+/* Toggle Admin dans navbar */
+.admin-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.admin-toggle:hover {
+  border-color: var(--border-color);
+}
+
+.admin-toggle-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+.admin-toggle-switch {
+  width: 36px;
+  height: 20px;
+  background: var(--bg-elevated);
+  border-radius: 10px;
+  position: relative;
+  transition: background var(--transition-fast);
+}
+
+.admin-toggle-switch::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--text-muted);
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: all var(--transition-fast);
+}
+
+.admin-toggle.active .admin-toggle-switch {
+  background: var(--accent-secondary);
+}
+
+.admin-toggle.active .admin-toggle-switch::after {
+  left: 18px;
+  background: var(--bg-primary);
+}
+
+/* Mode indicateur */
+.admin-mode-indicator {
+  font-size: var(--font-size-xs);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+.admin-mode-indicator.standard {
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+}
+
+.admin-mode-indicator.admin {
+  background: var(--accent-primary);
+  color: var(--accent-secondary);
+}
+
+/* Console Admin Panel */
+.admin-console {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  background: var(--bg-secondary);
+  border-top: 2px solid var(--border-color);
+  transform: translateY(100%);
+  transition: transform var(--transition-base);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-console.visible {
+  transform: translateY(0);
+}
+
+/* Header console */
+.admin-console-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.admin-console-title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-accent);
+}
+
+.admin-console-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.admin-btn {
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.admin-btn:hover {
+  background: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.admin-btn-close:hover {
+  background: var(--alert-color);
+  color: var(--text-primary);
+}
+
+/* Body console */
+.admin-console-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-sm);
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 12px;
+}
+
+.admin-logs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Entree de log */
+.admin-log-entry {
+  display: flex;
+  gap: var(--space-sm);
+  padding: 2px var(--space-xs);
+  border-radius: 2px;
+}
+
+.admin-log-entry:hover {
+  background: var(--hover-overlay);
+}
+
+.admin-log-time {
+  color: var(--text-muted);
+  min-width: 70px;
+}
+
+.admin-log-type {
+  min-width: 40px;
+  font-weight: 600;
+}
+
+.admin-log-src {
+  color: var(--text-secondary);
+  min-width: 80px;
+}
+
+.admin-log-msg {
+  color: var(--text-primary);
+  flex: 1;
+  word-break: break-all;
+}
+
+/* Couleurs par type */
+.admin-log-log .admin-log-type { color: var(--success-color); }
+.admin-log-info .admin-log-type { color: var(--info-color); }
+.admin-log-warn .admin-log-type { color: var(--warning-color); }
+.admin-log-err .admin-log-type { color: var(--alert-color); }
+.admin-log-err { background: rgba(139, 69, 19, 0.1); }
+.admin-log-warn { background: rgba(204, 112, 0, 0.05); }
+
+/* Elements visibles seulement en mode admin */
+.admin-only {
+  display: none !important;
+}
+
+body.admin-mode .admin-only {
+  display: flex !important;
+}
+
+/* Ajustement body quand console ouverte */
+body.console-open {
+  padding-bottom: 250px;
+}
+
+/* ============================================
+   ADMIN CONFIG PANEL - Editeur de configuration
+   ============================================ */
+
+.admin-config-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+}
+
+.admin-config-panel.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Header */
+.admin-config-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.admin-config-header h3 {
+  margin: 0;
+  font-size: var(--font-size-md);
+  color: var(--text-accent);
+}
+
+.admin-config-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+/* Body */
+.admin-config-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-md);
+}
+
+/* Footer */
+.admin-config-footer {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-tertiary);
+  border-top: 1px solid var(--border-subtle);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.config-status {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.config-status-success { color: var(--success-color); }
+.config-status-error { color: var(--alert-color); }
+.config-status-warning { color: var(--warning-color); }
+.config-status-info { color: var(--info-color); }
+
+/* Sections */
+.config-section {
+  margin-bottom: var(--space-sm);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.config-section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-tertiary);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.config-section-header:hover {
+  background: var(--bg-elevated);
+}
+
+.config-section-toggle {
+  font-size: 10px;
+  color: var(--text-muted);
+  transition: transform var(--transition-fast);
+}
+
+.config-section-name {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.config-section-content {
+  padding: var(--space-sm) var(--space-md);
+  display: none;
+}
+
+/* Champs */
+.config-field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.config-field:last-child {
+  border-bottom: none;
+}
+
+.config-label {
+  flex: 0 0 140px;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.config-input {
+  flex: 1;
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  transition: border-color var(--transition-fast);
+}
+
+.config-input:focus {
+  outline: none;
+  border-color: var(--accent-secondary);
+}
+
+/* Toggle checkbox */
+.config-toggle {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+.config-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.config-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-elevated);
+  border-radius: 11px;
+  transition: background var(--transition-fast);
+}
+
+.config-toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 2px;
+  bottom: 2px;
+  background: var(--text-muted);
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.config-toggle input:checked + .config-toggle-slider {
+  background: var(--accent-secondary);
+}
+
+.config-toggle input:checked + .config-toggle-slider::before {
+  transform: translateX(18px);
+  background: var(--bg-primary);
+}
+
+/* Arrays */
+.config-array {
+  padding: var(--space-sm) 0;
+}
+
+.config-array-label {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.config-array-input {
+  width: 100%;
+  min-height: 80px;
+  padding: var(--space-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: var(--font-size-xs);
+  resize: vertical;
+}
+
+.config-array-input:focus {
+  outline: none;
+  border-color: var(--accent-secondary);
+}
+
+/* Boutons */
+.btn-primary {
+  background: var(--accent-secondary);
+  color: var(--bg-primary);
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-tertiary);
+}
+
+.btn-sm {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-size-xs);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}

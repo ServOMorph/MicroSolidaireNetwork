@@ -1,0 +1,64 @@
+{
+  "APP": {
+    "name": "[NomProjet]",
+    "version": "1.0.0",
+    "author": "JeGeekUtile",
+    "description": "Application creee via @creation-appli",
+    "debug": false
+  },
+  "SERVER": {
+    "port": 3000,
+    "host": "localhost",
+    "cors_enabled": true,
+    "static_folder": ".",
+    "api_prefix": "/api"
+  },
+  "LOGS": {
+    "enabled": true,
+    "file": "logs/console.log",
+    "max_entries": 500,
+    "clear_on_start": true,
+    "format": "TS|TYPE|SRC|MSG",
+    "levels": ["LOG", "INFO", "WARN", "ERR"]
+  },
+  "UI": {
+    "default_theme": "nuit-foret",
+    "default_mode": "econome",
+    "admin_enabled": true,
+    "console_visible": false,
+    "animations": true,
+    "language": "fr"
+  },
+  "THEMES": [
+    "nuit-foret",
+    "terre-ethique",
+    "cryptage-nocturne",
+    "aurore-humaine",
+    "horizon-progres",
+    "ocean-profond",
+    "magma-digital",
+    "glacier-arctique",
+    "sable-dore",
+    "nebula-cosmique"
+  ],
+  "MODES": [
+    "hyper-econome",
+    "econome",
+    "normal",
+    "ultra",
+    "supernova",
+    "quasar"
+  ],
+  "TESTS": {
+    "coverage_target": 85,
+    "output_dir": "tests/reports",
+    "verbose": true
+  },
+  "PATHS": {
+    "logs": "logs/",
+    "archives": "archives/",
+    "notes": "notes_persos/",
+    "tests": "tests/",
+    "config": "config/"
+  }
+}

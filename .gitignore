@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+vendor/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build
+dist/
+build/
+*.min.js
+*.min.css
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/*.log
+!logs/.gitkeep
+
+# Notes personnelles (prive)
+notes_persos/*
+!notes_persos/.gitkeep
+
+# Archives (garder le dossier)
+!archives/.gitkeep
+
+# Env
+.env
+.env.local
+*.local
+
+# Cache
+.cache/
+.temp/

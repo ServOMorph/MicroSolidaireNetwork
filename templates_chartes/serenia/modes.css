@@ -1,0 +1,26 @@
+/* ============================================
+   MODES - SérénIATech
+   Mode unique standard (pas de sélecteur de modes)
+   ============================================ */
+
+/* Mode par defaut - utilise les variables de themes.css */
+:root {
+  /* Animations moderees */
+  --animation-duration: 250ms;
+  --animation-scale-hover: 1.02;
+  --animation-translate-hover: -2px;
+  --animation-enabled: 1;
+}
+
+/* Respect des preferences utilisateur pour les animations */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --animation-duration: 0.01ms;
+    --animation-scale-hover: 1;
+    --animation-translate-hover: 0;
+    --animation-enabled: 0;
+    --transition-fast: 0.01ms;
+    --transition-base: 0.01ms;
+    --transition-slow: 0.01ms;
+  }
+}

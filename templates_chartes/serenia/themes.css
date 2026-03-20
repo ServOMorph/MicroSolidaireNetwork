@@ -1,0 +1,105 @@
+/* ============================================
+   THEMES - SérénIATech
+   Palette unique turquoise avec mode clair/sombre automatique
+   ============================================ */
+
+:root {
+  /* === COULEURS PRINCIPALES === */
+  --color-primary: rgb(165, 201, 202);
+  --color-primary-dark: rgb(125, 161, 162);
+  --color-primary-light: rgb(185, 221, 222);
+  --color-primary-alpha: rgba(165, 201, 202, 0.1);
+
+  /* === COULEURS DE TEXTE === */
+  --color-dark: #000000;
+  --color-text: #1a1a1a;
+  --color-text-light: #2d2d2d;
+  --color-text-muted: #404040;
+
+  /* === COULEURS DE FOND === */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f7fafc;
+  --color-bg-dark: #edf2f7;
+
+  /* === COULEURS SEMANTIQUES === */
+  --color-success: #48bb78;
+  --color-warning: #ed8936;
+  --color-error: #f56565;
+
+  /* === ALIAS POUR COMPATIBILITE === */
+  --bg-primary: var(--color-bg);
+  --bg-secondary: var(--color-bg-alt);
+  --bg-tertiary: var(--color-bg-dark);
+  --text-primary: var(--color-text);
+  --text-secondary: var(--color-text-light);
+  --text-muted: var(--color-text-muted);
+  --accent-color: var(--color-primary);
+  --accent-hover: var(--color-primary-dark);
+  --accent-glow: var(--color-primary-alpha);
+  --border-color: rgba(165, 201, 202, 0.3);
+  --hover-overlay: rgba(165, 201, 202, 0.1);
+  --glow-color: rgba(165, 201, 202, 0.3);
+
+  /* === ESPACEMENTS === */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+
+  /* === BORDURES === */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* === OMBRES === */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* === TRANSITIONS === */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+
+  /* === TYPOGRAPHIE === */
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 24px;
+  --line-height-tight: 1.2;
+  --line-height-base: 1.6;
+  --line-height-relaxed: 1.8;
+}
+
+/* === MODE SOMBRE AUTOMATIQUE === */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-dark: #f7fafc;
+    --color-text: #e2e8f0;
+    --color-text-light: #cbd5e0;
+    --color-text-muted: #a0aec0;
+
+    --color-bg: #1a202c;
+    --color-bg-alt: #2d3748;
+    --color-bg-dark: #4a5568;
+
+    --bg-primary: var(--color-bg);
+    --bg-secondary: var(--color-bg-alt);
+    --bg-tertiary: var(--color-bg-dark);
+    --text-primary: var(--color-text);
+    --text-secondary: var(--color-text-light);
+    --text-muted: var(--color-text-muted);
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  }
+}

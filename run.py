@@ -25,7 +25,7 @@ PROJECT_ROOT = Path(__file__).parent
 WATCH_INTERVAL = 2  # Secondes entre chaque verification
 
 # Dossiers a surveiller pour l'auto-reload
-WATCH_DIRS = ["src", "config"]
+WATCH_DIRS = ["css", "js"]
 
 # Extensions a surveiller
 WATCH_EXTENSIONS = {".py", ".js", ".json", ".html", ".css"}
@@ -49,10 +49,8 @@ class FileWatcher:
             if dir_path.exists():
                 for ext in self.extensions:
                     files.extend(dir_path.rglob(f"*{ext}"))
-        # Ajouter index.html a la racine
-        index = self.root / "index.html"
-        if index.exists():
-            files.append(index)
+        # Ajouter tous les .html du dossier site
+        files.extend(self.root.glob("*.html"))
         return files
 
     def _compute_hash(self, filepath: Path) -> str:
@@ -122,12 +120,13 @@ def lancer_serveur(watch=True):
     print(f"  MicroSolidaireNetwork - Serveur Dev - Port {PORT}")
     print(f"{'=' * 50}")
 
-    os.chdir(PROJECT_ROOT)
-    url = f"http://localhost:{PORT}"
+    site_dir = PROJECT_ROOT / "site"
+    os.chdir(site_dir)
+    url = f"http://localhost:{PORT}/choix.html"
 
     watcher = None
     if watch:
-        watcher = FileWatcher(PROJECT_ROOT, WATCH_DIRS, WATCH_EXTENSIONS)
+        watcher = FileWatcher(site_dir, WATCH_DIRS, WATCH_EXTENSIONS)
         watcher.start(lambda: setattr(ReloadHandler, 'last_update', time.time()))
 
     print(f"\n[URL] {url}")

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choisir la version — Micro Solidaire Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lato:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #5BC0DE;
+      --primary-dark: #47A9C6;
+      --bg: #0D1117;
+      --bg-card: #161B22;
+      --border: rgba(255,255,255,0.08);
+      --text: #E8EDF2;
+      --text-light: #A8B5C2;
+      --shadow: 0 8px 32px rgba(0,0,0,0.5);
+      --radius: 16px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .logo-mark {
+      width: 56px; height: 56px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      margin: 0 auto 1.25rem;
+      box-shadow: 0 0 24px rgba(91,192,222,0.35);
+    }
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      color: var(--text-light);
+      text-align: center;
+      font-size: 0.95rem;
+      margin-bottom: 3rem;
+    }
+
+    .cards {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 1180px;
+    }
+
+    .version-card {
+      flex: 1 1 320px;
+      max-width: 380px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .version-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: var(--primary);
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+    .card-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.2rem 0.7rem;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge-full { background: rgba(91,192,222,0.15); color: var(--primary); }
+    .badge-mini { background: rgba(255,211,122,0.15); color: #FFD37A; }
+    .badge-nature { background: rgba(111,175,143,0.2); color: #4A8A6C; }
+    .badge-chatgpt { background: rgba(168,199,216,0.25); color: #3A7A9B; }
+
+    .card-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .card-desc {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .card-features {
+      list-style: none;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      margin-top: auto;
+    }
+    .card-features li::before {
+      content: "✓ ";
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .card-cta {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.65rem 1.5rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.2s;
+    }
+    .cta-full {
+      background: var(--primary);
+      color: #0D1117;
+    }
+    .cta-mini {
+      background: #FFD37A;
+      color: #0D1117;
+    }
+    .cta-nature {
+      background: #D98C5F;
+      color: #fff;
+    }
+    .cta-chatgpt { background: #A8C7D8; color: #1A3A50; }
+    .version-card:hover .cta-full { background: var(--primary-dark); }
+    .version-card:hover .cta-mini { background: #F5C842; }
+    .version-card:hover .cta-nature { background: #C47A4E; }
+    .version-card:hover .cta-chatgpt { background: #8FB8CC; }
+
+    .footer-note {
+      margin-top: 3rem;
+      font-size: 0.78rem;
+      color: var(--text-light);
+      opacity: 0.6;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .cards { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-mark">🤝</div>
+  <h1>Micro Solidaire Network</h1>
+  <p class="subtitle">Association loi 1901 — Choisir la version à afficher</p>
+
+  <div class="cards">
+
+    <a href="index.html" class="version-card">
+      <div class="card-icon">🗂️</div>
+      <span class="card-badge badge-full">Site complet</span>
+      <div class="card-title">Site multi-pages</div>
+      <p class="card-desc">Navigation complète avec toutes les pages, sections détaillées et formulaires.</p>
+      <ul class="card-features">
+        <li>Mission, Communauté, Blog</li>
+        <li>Formulaire d'adhésion complet</li>
+        <li>Ressources &amp; espace membres</li>
+        <li>Mentions légales, RGPD, Cookies</li>
+      </ul>
+      <span class="card-cta cta-full">Ouvrir le site complet →</span>
+    </a>
+
+    <a href="mini-site.html" class="version-card">
+      <div class="card-icon">⚡</div>
+      <span class="card-badge badge-mini">Mini Site</span>
+      <div class="card-title">Page unique</div>
+      <p class="card-desc">L'essentiel de l'association condensé en une seule page, rapide à partager.</p>
+      <ul class="card-features">
+        <li>Hero, Mission, Services</li>
+        <li>Adhésion en un clic</li>
+        <li>Contact direct</li>
+        <li>Chargement instantané</li>
+      </ul>
+      <span class="card-cta cta-mini">Ouvrir le mini site →</span>
+    </a>
+
+    <a href="site2.html" class="version-card">
+      <div class="card-icon">🌿</div>
+      <span class="card-badge badge-nature">Mini Site Entier</span>
+      <div class="card-title">Style Aquarelle</div>
+      <p class="card-desc">Site complet page unique avec l'esthétique artisanale et naturelle de la charte 3.</p>
+      <ul class="card-features">
+        <li>Qui sommes-nous, Activités</li>
+        <li>6 ressources pratiques</li>
+        <li>Formulaire de contact</li>
+        <li>Prochain événement mis en avant</li>
+      </ul>
+      <span class="card-cta cta-nature">Ouvrir le site aquarelle →</span>
+    </a>
+
+    <a href="site2-chatgpt/index.htm" class="version-card">
+      <div class="card-icon">🎨</div>
+      <span class="card-badge badge-chatgpt">ChatGPT</span>
+      <div class="card-title">Maquette ChatGPT</div>
+      <p class="card-desc">Version maquette générée par ChatGPT avec la charte graphique 3 aquarelle.</p>
+      <ul class="card-features">
+        <li>Hero illustration plein écran</li>
+        <li>3 cartes Rencontres, Ateliers, Ressources</li>
+        <li>Style ivoire &amp; terre cuite</li>
+        <li>HTML/CSS pur, léger</li>
+      </ul>
+      <span class="card-cta cta-chatgpt">Ouvrir la maquette →</span>
+    </a>
+
+  </div>
+
+  <p class="footer-note">Serveur dev local · Port 4019 · MicroSolidaireNetwork</p>
+</body>
+</html>

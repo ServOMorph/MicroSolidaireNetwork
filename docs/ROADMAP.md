@@ -4,41 +4,65 @@
 ---
 meta:
   stat: dev
-  prog: 5
-  phase: 1
-  maj: YYYY-MM-DD
-  goal: "[Objectif principal du projet]"
-  success: ["Critere 1", "Critere 2"]
+  prog: 55
+  phase: 2
+  maj: 2026-03-22
+  goal: "Site internet complet pour l'association Micro Solidaire Network"
+  success: ["Site multi-pages livré", "Mini sites fonctionnels", "Sélecteur de chartes graphiques", "Page de choix de version"]
 ---
 
 ## PHASES
 
-### P1:Fondations [1]
-env_cfg[2] struct[2] charte_ui[2] roadmap[2] tests_base[0]
+### P1:Fondations [2]
+env_cfg[2] struct[2] charte_ui[2] roadmap[2] run_py[2]
 
-### P2:Core [0]
-composant_main[0] service_1[0] service_2[0] api[0] tests_unit[0]
+### P2:Site principal multi-pages [2]
+index[2] mission[2] ce-que-tu-y-trouves[2] communaute[2] blog[2]
+adhesion[2] ressources[2] contact[2] mentions-legales[2]
+confidentialite[2] cookies[2] styles_css[2] main_js[2]
 
-### P3:Features [0]
-feature_a[0] feature_b[0] feature_c[0]
+### P3:Mini sites & variantes [2]
+choix_html[2] mini_site[2] site2_aquarelle[2] site2_chatgpt[2]
+logos_serenia_famicloud[2] mode_sombre[2]
 
-### P4:Polish [0]
-perf[0] e2e[0] docs[0] a11y[0] secu[0]
+### P4:Sélecteur de chartes graphiques [2]
+charte1_dark[2] charte2_glassmorphism[2] charte3_aquarelle[2]
+switcher_site_principal[2] switcher_mini_site[2]
+images_charte3_doc[2]
 
-### P5:Deploy [0]
-ci_cd[0] staging[0] prod[0] monitoring[0]
+### P5:Images & Assets [1]
+images_charte3_generation[0] favicon[0] og_image[0]
+
+### P6:Polish & Deploy [0]
+perf[0] seo[0] a11y_audit[0] formulaires_reels[0] deploy[0]
 
 ## SESSIONS
 # Format: S[DATE]|O:[obj]|F:[fait]|B:[bloque>solution]|N:[next]
-S[YYYY-MM-DD]|O:init_projet|F:env_cfg,struct,charte_ui|B:none|N:composant_main
+S[2026-03-22]|O:mini_sites+chartes|F:choix.html,mini-site.html,site2.html,site2-chatgpt,switcher_3_chartes,images_doc|B:none|N:generer_images_charte3
 
 ## LOG
 # Format: TYPE|ID|DATE|PRIO|DESC|ETAT
-# Types: DEC(decision) Q(question) BUG(bug) DEP(dependance)
-DEC|001|YYYY-MM-DD|-|Architecture modulaire choisie|-
-DEP|charte_graphique|1.0|-|10 themes + 6 modes|-
+DEC|001|2026-03-22|H|Site statique HTML/CSS/JS servi par Python http.server|done
+DEC|002|2026-03-22|H|Sélecteur de charte via data-theme sur <html> + localStorage|done
+DEC|003|2026-03-22|M|Mini site = page unique, site complet = multi-pages|done
+DEC|004|2026-03-22|M|4 versions sur choix.html: complet, mini, aquarelle, chatgpt|done
+DEP|google_fonts|runtime|L|Poppins+Lato+Caveat+Inter via CDN Google Fonts|actif
 
 ## DELTA
 # Historique incremental (append-only) - Format: [DATE] ACTION CIBLE DETAIL
-# Actions: +add -del ~mod !fix ?question
-[YYYY-MM-DD] +add P1 init projet via @creation-appli
+[2026-03-22] +add P1 init projet via @creation-appli
+[2026-03-22] +add P2 site multi-pages complet (11 pages HTML)
+[2026-03-22] +add P2 run.py serveur dev avec auto-reload FileWatcher
+[2026-03-22] +add P2 mode sombre (styles.css + variables CSS)
+[2026-03-22] +add P2 logos SéréniaTech + FamiCloud copiés dans assets/
+[2026-03-22] +add P3 choix.html page de sélection de version (4 cartes)
+[2026-03-22] +add P3 mini-site.html page unique dark mode
+[2026-03-22] +add P3 site2.html mini site entier charte3 aquarelle
+[2026-03-22] +add P3 site2-chatgpt/ maquette ChatGPT intégrée
+[2026-03-22] +add P4 switcher charte graphique dans navbar (main.js inject)
+[2026-03-22] +add P4 charte1: dark moderne #5BC0DE (existant)
+[2026-03-22] +add P4 charte2: glassmorphism #0B1A3A→#5A3E8B + #2F6BFF
+[2026-03-22] +add P4 charte3: aquarelle ivoire #F8F5F0 + vert #6FAF8F + Caveat
+[2026-03-22] +add P4 switcher intégré mini-site.html (inline CSS+JS)
+[2026-03-22] +add docs IMAGES_CHARTE3.md avec 7 prompts DALL-E
+[2026-03-22] !fix SITE2_chatgpt hero.jpg→hero.png + assets/icons→assets/img

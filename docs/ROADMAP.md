@@ -4,9 +4,9 @@
 ---
 meta:
   stat: dev
-  prog: 55
-  phase: 2
-  maj: 2026-03-22
+  prog: 65
+  phase: 3
+  maj: 2026-03-23
   goal: "Site internet complet pour l'association Micro Solidaire Network"
   success: ["Site multi-pages livré", "Mini sites fonctionnels", "Sélecteur de chartes graphiques", "Page de choix de version"]
 ---
@@ -22,7 +22,7 @@ adhesion[2] ressources[2] contact[2] mentions-legales[2]
 confidentialite[2] cookies[2] styles_css[2] main_js[2]
 
 ### P3:Mini sites & variantes [2]
-choix_html[2] mini_site[2] site2_aquarelle[2] site2_chatgpt[2]
+choix_html[2] mini_site[2] site2_aquarelle[2] site2_chatgpt[2] site3_comet[2]
 logos_serenia_famicloud[2] mode_sombre[2]
 
 ### P4:Sélecteur de chartes graphiques [2]
@@ -39,13 +39,14 @@ perf[0] seo[0] a11y_audit[0] formulaires_reels[0] deploy[0]
 ## SESSIONS
 # Format: S[DATE]|O:[obj]|F:[fait]|B:[bloque>solution]|N:[next]
 S[2026-03-22]|O:mini_sites+chartes|F:choix.html,mini-site.html,site2.html,site2-chatgpt,switcher_3_chartes,images_doc|B:none|N:generer_images_charte3
+S[2026-03-23]|O:maquettes+ajustements|F:SITE3_COMET_ajout,fix_404_chatgpt,icones_x4,hero_div2|B:site2-chatgpt_renomme_site2_0-chatgpt>lien_corrige|N:generer_images_charte3
 
 ## LOG
 # Format: TYPE|ID|DATE|PRIO|DESC|ETAT
 DEC|001|2026-03-22|H|Site statique HTML/CSS/JS servi par Python http.server|done
 DEC|002|2026-03-22|H|Sélecteur de charte via data-theme sur <html> + localStorage|done
 DEC|003|2026-03-22|M|Mini site = page unique, site complet = multi-pages|done
-DEC|004|2026-03-22|M|4 versions sur choix.html: complet, mini, aquarelle, chatgpt|done
+DEC|004|2026-03-22|M|5 versions sur choix.html: complet, mini, aquarelle, chatgpt, comet|done
 DEP|google_fonts|runtime|L|Poppins+Lato+Caveat+Inter via CDN Google Fonts|actif
 
 ## DELTA
@@ -66,3 +67,6 @@ DEP|google_fonts|runtime|L|Poppins+Lato+Caveat+Inter via CDN Google Fonts|actif
 [2026-03-22] +add P4 switcher intégré mini-site.html (inline CSS+JS)
 [2026-03-22] +add docs IMAGES_CHARTE3.md avec 7 prompts DALL-E
 [2026-03-22] !fix SITE2_chatgpt hero.jpg→hero.png + assets/icons→assets/img
+[2026-03-23] +add P3 SITE3_COMET intégré dans choix.html (carte ☀️)
+[2026-03-23] !fix choix.html lien site2-chatgpt→site2_0-chatgpt (404 corrigé)
+[2026-03-23] ~mod site2_0-chatgpt/style.css icônes 60px→240px (x4), hero 70vh→35vh (÷2)

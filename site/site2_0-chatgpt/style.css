@@ -62,7 +62,7 @@ body {
 /* HERO */
 .hero {
   background: url('assets/img/hero.png') center/cover no-repeat;
-  height: 70vh;
+  height: 35vh;
   position: relative;
 }
 
@@ -126,7 +126,7 @@ body {
 }
 
 .card-icon {
-  width: 60px;
+  width: 240px;
   margin-bottom: 15px;
 }
 

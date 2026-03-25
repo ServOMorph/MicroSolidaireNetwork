@@ -26,7 +26,8 @@ Le serveur s'ouvre automatiquement sur la **page de choix de version**.
 | **Site complet** | `site/index.html` | 11 pages HTML, navigation complète |
 | **Mini Site** | `site/mini-site.html` | Page unique dark mode, sélecteur de charte |
 | **Aquarelle** | `site/site2.html` | Mini site entier, charte 3 aquarelle/artisanale |
-| **ChatGPT** | `site/site2-chatgpt/index.htm` | Maquette générée par ChatGPT |
+| **ChatGPT** | `site/site2_0-chatgpt/index.htm` | Maquette générée par ChatGPT |
+| **Comet** | `site/SITE3_COMET/index.htm` | Maquette style ivoire & orange terra |
 
 ---
 
@@ -63,10 +64,14 @@ MicroSolidaireNetwork/
 │   ├── cookies.html
 │   ├── mini-site.html        # Mini site page unique (sélecteur charte)
 │   ├── site2.html            # Mini site entier — charte 3 aquarelle
-│   ├── site2-chatgpt/        # Maquette ChatGPT
+│   ├── site2_0-chatgpt/      # Maquette ChatGPT (icônes 240px, hero 35vh)
 │   │   ├── index.htm
 │   │   ├── style.css
 │   │   └── assets/img/       # hero.png, rencontres.png, ateliers.png, ressources.png
+│   ├── SITE3_COMET/          # Maquette Comet (ivoire & orange terra)
+│   │   ├── index.htm
+│   │   ├── style.css
+│   │   └── assets/img/
 │   ├── css/
 │   │   └── styles.css        # CSS principal + chartes 1/2/3
 │   ├── js/

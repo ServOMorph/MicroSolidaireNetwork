@@ -1,0 +1,265 @@
+:root {
+  --bg-page: #f7f1e6;
+  --bg-card: #fdf6ea;
+  --accent: #e07a3f;
+  --accent-dark: #c55f23;
+  --text-main: #2c3840;
+  --text-soft: #5c666f;
+  --nav-line: #3c4b55;
+  --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.12);
+  --radius-card: 16px;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* HEADER */
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 24px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.logo-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #16324f;
+}
+
+.logo-tagline {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--text-soft);
+}
+
+.main-nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 15px;
+  color: #1e2b35;
+  text-decoration: none;
+  padding-bottom: 8px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--nav-line);
+  opacity: 0.4;
+}
+
+.nav-link:hover {
+  color: var(--accent-dark);
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  min-height: 520px;
+}
+
+.hero-image {
+  background-image: url("../img/hero.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 520px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 80px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.35) 65%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+.hero-content {
+  text-align: left;
+}
+
+.hero-title {
+  margin: 0 0 24px;
+  font-size: 34px;
+  line-height: 1.3;
+  color: #ffffff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background-color: var(--accent);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-dark);
+}
+
+/* FEATURES */
+
+.features {
+  margin-top: -80px;
+  padding-bottom: 80px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  padding: 32px 24px 28px;
+  text-align: center;
+}
+
+.feature-illustration {
+  height: 96px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-illustration img {
+  max-height: 96px;
+  width: auto;
+}
+
+.feature-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  color: #1c3550;
+}
+
+.feature-text {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-soft);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    min-height: 420px;
+  }
+
+  .hero-image,
+  .hero-overlay {
+    height: 420px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+  }
+
+  .features {
+    margin-top: -40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    position: static;
+    background-color: rgba(247, 241, 230, 0.9);
+  }
+
+  .hero {
+    margin-top: 0;
+  }
+
+  .hero-overlay {
+    padding-bottom: 40px;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+  }
+
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .btn-primary {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+}

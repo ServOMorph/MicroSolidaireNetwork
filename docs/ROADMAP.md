@@ -4,7 +4,7 @@
 ---
 meta:
   stat: dev
-  prog: 82
+  prog: 86
   phase: 5
   maj: 2026-06-14
   goal: "Site internet complet pour le projet Micro Solidaire Network"
@@ -45,6 +45,7 @@ S[2026-03-22]|O:mini_sites+chartes|F:choix.html,mini-site.html,site2.html,site2-
 S[2026-03-23]|O:maquettes+ajustements|F:SITE3_COMET_ajout,fix_404_chatgpt,icones_x4,hero_div2|B:site2-chatgpt_renomme_site2_0-chatgpt>lien_corrige|N:generer_images_charte3
 S[2026-06-14]|O:open_source+présentation|F:LICENSE,CONTRIBUTING,requirements,README_enrichi,repo_nettoyé,sections_contenu(qui-sommes-nous+rejoindre+contact),Inter_chargée,hero_recadré,edge_headless_screenshot|B:none|N:favicon+og_image+deploy
 S[2026-06-14b]|O:textes_projet+icones|F:textes_adaptés(projet_vs_asso),header_sticky,tagline_header,bouton_hero_supprimé,icones_aquarelle_x7,PROMPTS_ICONES.md|B:none|N:favicon+og_image+deploy
+S[2026-06-14c]|O:textes_je+inclusif+section_besoins|F:première_personne_singulier,écriture_inclusive,section_mes_besoins,onglet_nav,prompts_icones_x2,CLAUDE.md_directives|B:none|N:générer_icones_besoins+favicon+og_image+deploy
 
 ## LOG
 # Format: TYPE|ID|DATE|PRIO|DESC|ETAT
@@ -86,3 +87,10 @@ DEP|google_fonts|runtime|L|Poppins+Lato+Caveat+Inter via CDN Google Fonts|actif
 [2026-06-14] +add site2_0-chatgpt/style.css Inter via Google Fonts CDN
 [2026-06-14] ~mod site2_0-chatgpt/style.css hero: hauteur auto + padding 60px + cadrage center 40%
 [2026-06-14] +add workflow Edge headless screenshot pour vérification autonome rendu
+[2026-06-14] ~mod index.htm textes→première personne singulier (je/ma/mes/moi)
+[2026-06-14] ~mod index.htm écriture inclusive (·e·s, ·se) sur tous les noms/adjectifs genrés
+[2026-06-14] -del index.htm onglet nav "Qui sommes-nous" retiré
+[2026-06-14] +add index.htm section #mes-besoins (bureau + lieu QG) + onglet nav
+[2026-06-14] +add style.css styles section .needs (grid 2 colonnes + cards)
+[2026-06-14] +add PROMPTS_ICONES.md prompts icones-constituer-bureau + icone-lieu-qg
+[2026-06-14] +add CLAUDE.md directives UI (première personne singulier + écriture inclusive)

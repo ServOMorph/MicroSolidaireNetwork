@@ -96,6 +96,32 @@ Style: soft gouache, gentle lines, no text. Conveys financial or material suppor
 
 ---
 
+## SECTION "MES BESOINS" — Aides recherchées
+
+### 8. Constituer un bureau
+**Chemin** : `site/site2_0-chatgpt/assets/img/icone-constituer-bureau.png`
+
+```
+Watercolor illustration, square 200x200px, white background.
+A simple clipboard or document pad with a soft checkmark or small team silhouettes on it,
+suggesting organizational structure and governance. Palette: warm orange (#D98C5F), soft green (#6FAF8F), cream.
+Style: soft gouache, gentle lines, no text. Conveys team building, organization, and administrative structure.
+```
+
+---
+
+### 9. Trouver un lieu QG
+**Chemin** : `site/site2_0-chatgpt/assets/img/icone-lieu-qg.png`
+
+```
+Watercolor illustration, square 200x200px, white background.
+A simple map pin or location marker with a small building or house silhouette inside, 
+suggesting a physical meeting place. Palette: warm orange (#D98C5F), soft green (#6FAF8F), cream.
+Style: soft gouache, gentle lines, no text. Conveys location, physical space, gathering place.
+```
+
+---
+
 ## Après génération
 
 1. Placer toutes les images dans : `site/site2_0-chatgpt/assets/img/`

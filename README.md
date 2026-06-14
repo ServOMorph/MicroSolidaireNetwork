@@ -14,11 +14,10 @@
 
 **Micro Solidaire Network** est un projet visant à créer une association qui fédère des micro-entrepreneurs
 autour d'un **numérique responsable** et d'une **IA éthique**. Ce dépôt contient
-le **site internet** du projet : un site statique multi-pages accompagné de
-plusieurs variantes de maquettes et d'un sélecteur de chartes graphiques.
+le **site internet** du projet : un site statique servi par un petit serveur de développement Python.
 
 Le projet est volontairement **sans dépendance** : HTML / CSS / JavaScript pur,
-servi par un petit serveur de développement Python (bibliothèque standard).
+bibliothèque standard Python uniquement.
 
 ---
 
@@ -47,10 +46,8 @@ MicroSolidaireNetwork/
 │   ├── style.css             # Styles + police Inter (CDN)
 │   └── assets/img/           # hero.png + icônes + visuels de sections
 ├── docs/
-│   ├── ROADMAP.md
-│   ├── SYNTHESE_ASSO.md
-│   └── SITE_INTERNET/
-│       └── CHARTES_GRAPHIQUES/
+│   ├── CHARTE_GRAPHIQUE.md
+│   └── COMMUNICATION/
 └── README.md
 ```
 

@@ -1,6 +1,6 @@
 # Contribuer à Micro Solidaire Network
 
-Merci de l'intérêt porté au site de l'association ! Les contributions sont les
+Merci de l'intérêt porté au projet ! Les contributions sont les
 bienvenues : correction de fautes, accessibilité, performances, nouvelles
 pages ou améliorations des chartes graphiques.
 
@@ -37,5 +37,5 @@ de dépendances n'est nécessaire.
 3. Vérifie le rendu localement avec `python run.py`.
 4. Ouvre une Pull Request en décrivant le changement.
 
-Pour toute question, ouvre une *issue* ou contacte l'association via la page
+Pour toute question, ouvre une *issue* ou contacte l'équipe du projet via la page
 Contact du site.

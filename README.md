@@ -5,16 +5,16 @@
 ![Statut](https://img.shields.io/badge/statut-en%20développement-orange)
 ![Stack](https://img.shields.io/badge/stack-HTML%20·%20CSS%20·%20JS-lightgrey)
 
-> Association loi 1901 · Libourne (Gironde) & en ligne
-> Communauté solidaire de micro-entrepreneurs engagés pour un numérique responsable et une IA éthique.
+> Projet de création d'une association loi 1901 · Libourne (Gironde) & en ligne
+> Communauté solidaire de micro-entrepreneurs pour un numérique responsable et une IA éthique.
 
 ---
 
 ## À propos
 
-**Micro Solidaire Network** est une association qui fédère des micro-entrepreneurs
+**Micro Solidaire Network** est un projet visant à créer une association qui fédère des micro-entrepreneurs
 autour d'un **numérique responsable** et d'une **IA éthique**. Ce dépôt contient
-le **site internet** de l'association : un site statique multi-pages accompagné de
+le **site internet** du projet : un site statique multi-pages accompagné de
 plusieurs variantes de maquettes et d'un sélecteur de chartes graphiques.
 
 Le projet est volontairement **sans dépendance** : HTML / CSS / JavaScript pur,

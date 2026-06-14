@@ -4,10 +4,10 @@
 ---
 meta:
   stat: dev
-  prog: 75
-  phase: 3
+  prog: 82
+  phase: 5
   maj: 2026-06-14
-  goal: "Site internet complet pour l'association Micro Solidaire Network"
+  goal: "Site internet complet pour le projet Micro Solidaire Network"
   success: ["Site multi-pages livré", "Mini sites fonctionnels", "Sélecteur de chartes graphiques", "Page de choix de version"]
 ---
 
@@ -33,6 +33,7 @@ images_charte3_doc[2]
 
 ### P5:Enrichissement maquette ChatGPT [1]
 police_inter[2] hero_recadrage[2] sections_contenu[2]
+textes_projet[2] header_sticky[2] icones_aquarelle[2]
 favicon[0] og_image[0]
 
 ### P6:Polish & Deploy [0]
@@ -43,6 +44,7 @@ perf[0] seo[0] a11y_audit[0] formulaires_reels[0] deploy[0]
 S[2026-03-22]|O:mini_sites+chartes|F:choix.html,mini-site.html,site2.html,site2-chatgpt,switcher_3_chartes,images_doc|B:none|N:generer_images_charte3
 S[2026-03-23]|O:maquettes+ajustements|F:SITE3_COMET_ajout,fix_404_chatgpt,icones_x4,hero_div2|B:site2-chatgpt_renomme_site2_0-chatgpt>lien_corrige|N:generer_images_charte3
 S[2026-06-14]|O:open_source+présentation|F:LICENSE,CONTRIBUTING,requirements,README_enrichi,repo_nettoyé,sections_contenu(qui-sommes-nous+rejoindre+contact),Inter_chargée,hero_recadré,edge_headless_screenshot|B:none|N:favicon+og_image+deploy
+S[2026-06-14b]|O:textes_projet+icones|F:textes_adaptés(projet_vs_asso),header_sticky,tagline_header,bouton_hero_supprimé,icones_aquarelle_x7,PROMPTS_ICONES.md|B:none|N:favicon+og_image+deploy
 
 ## LOG
 # Format: TYPE|ID|DATE|PRIO|DESC|ETAT

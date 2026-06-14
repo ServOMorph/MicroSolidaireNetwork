@@ -27,6 +27,9 @@ body {
   background-color: #F8F5F0;
   border-bottom: 1px solid #eee;
   padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header-container {
@@ -206,6 +209,20 @@ body {
 .value-icon {
   font-size: 28px;
   flex-shrink: 0;
+}
+
+.value-icon-img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.join-card-icon-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 14px;
 }
 
 .value-item strong {

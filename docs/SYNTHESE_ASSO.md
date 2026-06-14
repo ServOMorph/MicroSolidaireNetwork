@@ -5,7 +5,7 @@
 
 ## 1. Vision & Mission
 
-**Micro Solidaire Network** est une association loi 1901 dont la mission est de rassembler des micro-entrepreneurs au sein d'une **communauté solidaire interconnectée**.
+**Micro Solidaire Network** est un projet visant à créer une association loi 1901 dont la mission est de rassembler des micro-entrepreneurs au sein d'une **communauté solidaire interconnectée**.
 
 Finalités :
 - Rompre l'isolement des micro-entrepreneurs et créer un réseau de pairs
@@ -108,10 +108,10 @@ Structure : chaque sous-dossier = une section dans la navigation. Les fichiers �
 - **Conseil d'Administration** : 3 à 12 membres, stratégie, budget, partenariats
 - **Bureau** : Président·e + Secrétaire + Trésorier·ère — gestion courante
 
-**Types de membres (Article 5) :**
-1. **Adhérents** : micro-entrepreneurs / indépendants / porteurs de projet, à jour de cotisation
+**Types de contributeurs (envisagés à terme) :**
+1. **Contributeurs** : micro-entrepreneurs / indépendants / porteurs de projet contribuant au projet
 2. **Partenaires** : personnes morales (collectivités, réseaux, entreprises)
-3. **Bienfaiteurs** : soutien financier ou en nature significatif
+3. **Soutiens** : soutien financier ou en nature significatif
 
 **Ressources (Article 12) :**
 - Cotisations membres
@@ -144,12 +144,12 @@ Structure : chaque sous-dossier = une section dans la navigation. Les fichiers �
 
 ## 7. À implémenter dans le site public
 
-### Partie publique (site vitrine)
-- [ ] Page d'accueil : nom, baseline, objet, valeurs
-- [ ] Page Mission : entraide, réseau, bien-être, numérique
-- [ ] Page Adhésion : types de membres, tarifs cotisation, formulaire de pré-adhésion / contact
+### Partie publique (site vitrine — projet en développement)
+- [x] Page d'accueil : nom, baseline, objet, valeurs
+- [x] Page Mission : entraide, réseau, bien-être, numérique
+- [x] Page Implication : types de contributeurs, formulaire de contact
 - [ ] Calendrier des rencontres et ateliers (grandes dates)
-- [ ] Page Équipe / Portraits de membres / Témoignages
+- [ ] Page Équipe / Portraits de contributeurs / Témoignages
 - [ ] Footer : liens SéréniaTech, mentions légales, contact
 
 ### Espace membres (via plugin FamiCloud existant)

@@ -4,9 +4,9 @@
 ---
 meta:
   stat: dev
-  prog: 65
+  prog: 75
   phase: 3
-  maj: 2026-03-23
+  maj: 2026-06-14
   goal: "Site internet complet pour l'association Micro Solidaire Network"
   success: ["Site multi-pages livré", "Mini sites fonctionnels", "Sélecteur de chartes graphiques", "Page de choix de version"]
 ---
@@ -24,14 +24,16 @@ confidentialite[2] cookies[2] styles_css[2] main_js[2]
 ### P3:Mini sites & variantes [2]
 choix_html[2] mini_site[2] site2_aquarelle[2] site2_chatgpt[2] site3_comet[2]
 logos_serenia_famicloud[2] mode_sombre[2]
+→ 2026-06-14 : nettoyage repo (seul site2_0-chatgpt conservé), run.py→landing directe
 
 ### P4:Sélecteur de chartes graphiques [2]
 charte1_dark[2] charte2_glassmorphism[2] charte3_aquarelle[2]
 switcher_site_principal[2] switcher_mini_site[2]
 images_charte3_doc[2]
 
-### P5:Images & Assets [1]
-images_charte3_generation[0] favicon[0] og_image[0]
+### P5:Enrichissement maquette ChatGPT [1]
+police_inter[2] hero_recadrage[2] sections_contenu[2]
+favicon[0] og_image[0]
 
 ### P6:Polish & Deploy [0]
 perf[0] seo[0] a11y_audit[0] formulaires_reels[0] deploy[0]
@@ -40,6 +42,7 @@ perf[0] seo[0] a11y_audit[0] formulaires_reels[0] deploy[0]
 # Format: S[DATE]|O:[obj]|F:[fait]|B:[bloque>solution]|N:[next]
 S[2026-03-22]|O:mini_sites+chartes|F:choix.html,mini-site.html,site2.html,site2-chatgpt,switcher_3_chartes,images_doc|B:none|N:generer_images_charte3
 S[2026-03-23]|O:maquettes+ajustements|F:SITE3_COMET_ajout,fix_404_chatgpt,icones_x4,hero_div2|B:site2-chatgpt_renomme_site2_0-chatgpt>lien_corrige|N:generer_images_charte3
+S[2026-06-14]|O:open_source+présentation|F:LICENSE,CONTRIBUTING,requirements,README_enrichi,repo_nettoyé,sections_contenu(qui-sommes-nous+rejoindre+contact),Inter_chargée,hero_recadré,edge_headless_screenshot|B:none|N:favicon+og_image+deploy
 
 ## LOG
 # Format: TYPE|ID|DATE|PRIO|DESC|ETAT
@@ -70,3 +73,14 @@ DEP|google_fonts|runtime|L|Poppins+Lato+Caveat+Inter via CDN Google Fonts|actif
 [2026-03-23] +add P3 SITE3_COMET intégré dans choix.html (carte ☀️)
 [2026-03-23] !fix choix.html lien site2-chatgpt→site2_0-chatgpt (404 corrigé)
 [2026-03-23] ~mod site2_0-chatgpt/style.css icônes 60px→240px (x4), hero 70vh→35vh (÷2)
+[2026-06-14] +add open_source LICENSE MIT + CONTRIBUTING.md + requirements.txt
+[2026-06-14] ~mod README.md badges + À propos + Contribuer (chemins perso retirés)
+[2026-06-14] ~mod .gitignore untrack .claude/ (chemins machine privés)
+[2026-06-14] -del site/ tous variants sauf site2_0-chatgpt (choix.html, mini-site, aquarelle, COMET, css/, js/)
+[2026-06-14] ~mod run.py landing directe sur site2_0-chatgpt/index.htm
+[2026-06-14] +add site2_0-chatgpt/index.htm section #qui-sommes-nous (mission + 4 valeurs)
+[2026-06-14] +add site2_0-chatgpt/index.htm section #rejoindre (3 types membres)
+[2026-06-14] +add site2_0-chatgpt/index.htm section #contact (formulaire)
+[2026-06-14] +add site2_0-chatgpt/style.css Inter via Google Fonts CDN
+[2026-06-14] ~mod site2_0-chatgpt/style.css hero: hauteur auto + padding 60px + cadrage center 40%
+[2026-06-14] +add workflow Edge headless screenshot pour vérification autonome rendu

@@ -20,9 +20,10 @@
       <nav class="nav">
         <ul>
           <li><a href="#">Accueil</a></li>
-          <li><a href="#">Qui sommes-nous</a></li>
-          <li><a href="#">Nos activités</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#qui-sommes-nous">Qui sommes-nous</a></li>
+          <li><a href="#activites">Nos activités</a></li>
+          <li><a href="#rejoindre">Rejoindre</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -40,8 +41,59 @@
     </div>
   </section>
 
+  <!-- QUI SOMMES-NOUS -->
+  <section class="about" id="qui-sommes-nous">
+    <div class="container about-container">
+      <div class="about-text">
+        <span class="section-label">Notre association</span>
+        <h2>Une communauté solidaire pour les indépendants</h2>
+        <p>
+          <strong>Micro Solidaire Network</strong> est une association loi 1901 fondée à Libourne (Gironde),
+          ouverte à tous les micro-entrepreneurs de France. Notre mission : rompre l'isolement des
+          travailleurs indépendants et bâtir ensemble un réseau d'entraide concret.
+        </p>
+        <p>
+          Nous croyons que la réussite individuelle passe par la coopération. Nos membres partagent
+          leurs expériences, leurs outils, leurs bonnes pratiques — et s'accompagnent mutuellement
+          dans leur développement économique et leur bien-être.
+        </p>
+        <a href="#rejoindre" class="btn-primary">Devenir membre</a>
+      </div>
+      <div class="about-values">
+        <div class="value-item">
+          <span class="value-icon">🤝</span>
+          <div>
+            <strong>Entraide</strong>
+            <p>Un réseau de pairs bienveillant, non élitiste</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="value-icon">🌿</span>
+          <div>
+            <strong>Numérique responsable</strong>
+            <p>Des outils choisis pour leur éthique et leur sobriété</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="value-icon">🧠</span>
+          <div>
+            <strong>IA éthique</strong>
+            <p>L'intelligence artificielle au service des humains</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="value-icon">💆</span>
+          <div>
+            <strong>Bien-être</strong>
+            <p>Prévention des risques psychosociaux des indépendants</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FEATURES -->
-  <section class="features">
+  <section class="features" id="activites">
     <div class="container features-container">
 
       <div class="card">
@@ -62,6 +114,78 @@
         <p>Guides, outils et conseils en ligne.</p>
       </div>
 
+    </div>
+  </section>
+
+  <!-- REJOINDRE -->
+  <section class="join" id="rejoindre">
+    <div class="container join-container">
+      <span class="section-label light">Adhésion</span>
+      <h2>Rejoignez le réseau</h2>
+      <p class="join-intro">
+        Que vous soyez micro-entrepreneur, structure partenaire ou simplement soutien de la cause,
+        il y a une place pour vous dans la communauté.
+      </p>
+      <div class="join-cards">
+        <div class="join-card">
+          <div class="join-card-icon">👤</div>
+          <h3>Adhérent·e</h3>
+          <p>Micro-entrepreneur, indépendant ou porteur de projet. Accès complet à l'espace membres, aux ateliers et au réseau.</p>
+        </div>
+        <div class="join-card featured">
+          <div class="join-card-icon">🏢</div>
+          <h3>Partenaire</h3>
+          <p>Collectivité, réseau ou entreprise engagée. Participez au développement de l'écosystème solidaire.</p>
+        </div>
+        <div class="join-card">
+          <div class="join-card-icon">💛</div>
+          <h3>Bienfaiteur·trice</h3>
+          <p>Soutien financier ou en nature. Votre contribution aide directement les membres les plus fragiles.</p>
+        </div>
+      </div>
+      <a href="#contact" class="btn-light">Nous contacter pour adhérer</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container contact-container">
+      <div class="contact-info">
+        <span class="section-label">Contact</span>
+        <h2>Prenons contact</h2>
+        <p>
+          Une question, une envie de rejoindre le réseau, une proposition de partenariat ?
+          Écrivez-nous — nous répondons sous 48h.
+        </p>
+        <div class="contact-details">
+          <p>📍 Libourne (Gironde) &amp; en ligne</p>
+          <p>🌐 Association loi 1901</p>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="nom">Nom / Prénom</label>
+          <input type="text" id="nom" placeholder="Votre nom">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="votre@email.fr">
+        </div>
+        <div class="form-group">
+          <label for="sujet">Sujet</label>
+          <select id="sujet">
+            <option value="">Choisir un sujet</option>
+            <option value="adhesion">Adhésion</option>
+            <option value="partenariat">Partenariat</option>
+            <option value="question">Question générale</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" placeholder="Votre message..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-full">Envoyer le message</button>
+      </form>
     </div>
   </section>
 

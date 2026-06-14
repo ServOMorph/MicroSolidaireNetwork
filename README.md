@@ -29,7 +29,7 @@ servi par un petit serveur de développement Python (bibliothèque standard).
 python run.py
 
 # Le navigateur s'ouvre automatiquement sur la maquette
-http://localhost:4019/index.htm
+http://localhost:4019/index.html
 ```
 
 ---
@@ -42,11 +42,10 @@ MicroSolidaireNetwork/
 ├── requirements.txt          # Prérequis (aucune dépendance externe)
 ├── LICENSE                   # Licence MIT
 ├── CONTRIBUTING.md           # Guide de contribution
-├── site/
-│   └── site2_0-chatgpt/      # Maquette principale (landing page)
-│       ├── index.htm         # Accueil, Qui sommes-nous, Activités, Rejoindre, Contact
-│       ├── style.css         # Styles + police Inter (CDN)
-│       └── assets/img/       # hero.png, rencontres.png, ateliers.png, ressources.png
+├── UI/                       # Site servi (landing page)
+│   ├── index.html            # Accueil, Activités, Mes besoins, Rejoindre, Contact
+│   ├── style.css             # Styles + police Inter (CDN)
+│   └── assets/img/           # hero.png + icônes + visuels de sections
 ├── docs/
 │   ├── ROADMAP.md
 │   ├── SYNTHESE_ASSO.md

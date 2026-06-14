@@ -10,7 +10,7 @@ Style : gouache légère, lignes douces, chaleureux, bienveillant, sans texte.
 ## SECTION "QUI SOMMES-NOUS" — Valeurs
 
 ### 1. Entraide
-**Chemin** : `site/site2_0-chatgpt/assets/img/icone-entraide.png`
+**Chemin** : `UI/assets/img/icone-entraide.png`
 
 ```
 Watercolor illustration, square 200x200px, white background.
@@ -22,7 +22,7 @@ Style: soft gouache, gentle lines, no text. Conveys mutual support and solidarit
 ---
 
 ### 2. Numérique responsable
-**Chemin** : `site/site2_0-chatgpt/assets/img/icone-numerique-responsable.png`
+**Chemin** : `UI/assets/img/icone-numerique-responsable.png`
 
 ```
 Watercolor illustration, square 200x200px, white background.
@@ -34,7 +34,7 @@ Style: soft gouache, gentle lines, no text. Conveys ethical, sober, responsible 
 ---
 
 ### 3. IA éthique
-**Chemin** : `site/site2_0-chatgpt/assets/img/icone-ia-ethique.png`
+**Chemin** : `UI/assets/img/icone-ia-ethique.png`
 
 ```
 Watercolor illustration, square 200x200px, white background.
@@ -46,7 +46,7 @@ Style: soft gouache, gentle lines, no text. Conveys AI in service of humans, tho
 ---
 
 ### 4. Bien-être
-**Chemin** : `site/site2_0-chatgpt/assets/img/icone-bien-etre.png`
+**Chemin** : `UI/assets/img/icone-bien-etre.png`
 
 ```
 Watercolor illustration, square 200x200px, white background.
@@ -61,7 +61,7 @@ Style: soft gouache, gentle lines, no text. Conveys calm, wellbeing, and balance
 ## SECTION "REJOINDRE" — Types d'implication
 
 ### 5. Contributeur·rice
-**Chemin** : `site/site2_0-chatgpt/assets/img/icone-contributeur.png`
+**Chemin** : `UI/assets/img/icone-contributeur.png`
 
 ```
 Watercolor illustration, square 200x200px, white background.
@@ -73,7 +73,7 @@ Style: soft gouache, gentle lines, no text. Conveys individual engagement and pa
 ---
 
 ### 6. Partenaire
-**Chemin** : `site/site2_0-chatgpt/assets/img/icone-partenaire.png`
+**Chemin** : `UI/assets/img/icone-partenaire.png`
 
 ```
 Watercolor illustration, square 200x200px, white background.
@@ -85,7 +85,7 @@ Style: soft gouache, gentle lines, no text. Conveys institutional partnership an
 ---
 
 ### 7. Soutien
-**Chemin** : `site/site2_0-chatgpt/assets/img/icone-soutien.png`
+**Chemin** : `UI/assets/img/icone-soutien.png`
 
 ```
 Watercolor illustration, square 200x200px, white background.
@@ -99,7 +99,7 @@ Style: soft gouache, gentle lines, no text. Conveys financial or material suppor
 ## SECTION "MES BESOINS" — Aides recherchées
 
 ### 8. Constituer un bureau
-**Chemin** : `site/site2_0-chatgpt/assets/img/icone-constituer-bureau.png`
+**Chemin** : `UI/assets/img/icone-constituer-bureau.png`
 
 ```
 Watercolor illustration, square 200x200px, white background.
@@ -111,7 +111,7 @@ Style: soft gouache, gentle lines, no text. Conveys team building, organization,
 ---
 
 ### 9. Trouver un lieu QG
-**Chemin** : `site/site2_0-chatgpt/assets/img/icone-lieu-qg.png`
+**Chemin** : `UI/assets/img/icone-lieu-qg.png`
 
 ```
 Watercolor illustration, square 200x200px, white background.
@@ -124,7 +124,7 @@ Style: soft gouache, gentle lines, no text. Conveys location, physical space, ga
 
 ## Après génération
 
-1. Placer toutes les images dans : `site/site2_0-chatgpt/assets/img/`
+1. Placer toutes les images dans : `UI/assets/img/`
 2. Les noms de fichiers doivent correspondre exactement aux chemins indiqués ci-dessus
 3. Format PNG recommandé (avec transparence si possible)
 4. Taille minimale : 200x200px

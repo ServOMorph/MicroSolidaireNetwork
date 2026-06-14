@@ -1,9 +1,0 @@
-# Tests
-# Systeme de tests avec couverture cible 85%
-#
-# Fichiers:
-# - test_config.py  : Tests module configuration
-# - test_server.py  : Tests endpoints API serveur
-# - run_tests.py    : Script execution + rapport
-#
-# Usage: python tests/run_tests.py

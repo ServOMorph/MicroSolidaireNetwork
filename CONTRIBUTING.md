@@ -18,7 +18,7 @@ de dépendances n'est nécessaire.
 
 ## Organisation du dépôt
 
-- Tout le site servi se trouve dans `site/`.
+- Tout le site servi se trouve dans `UI/`.
 - La documentation (chartes, plan de site, SEO…) est dans `docs/`.
 - Voir la structure détaillée dans le [README](README.md).
 

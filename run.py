@@ -24,8 +24,8 @@ PORT = 4019
 PROJECT_ROOT = Path(__file__).parent
 WATCH_INTERVAL = 2  # Secondes entre chaque verification
 
-# Dossiers a surveiller pour l'auto-reload
-WATCH_DIRS = ["css", "js"]
+# Dossiers a surveiller pour l'auto-reload (sous-dossiers de UI/)
+WATCH_DIRS = ["assets"]
 
 # Extensions a surveiller
 WATCH_EXTENSIONS = {".py", ".js", ".json", ".html", ".css"}
@@ -49,8 +49,9 @@ class FileWatcher:
             if dir_path.exists():
                 for ext in self.extensions:
                     files.extend(dir_path.rglob(f"*{ext}"))
-        # Ajouter tous les .html du dossier site
+        # Ajouter les .html et .css a la racine de UI/
         files.extend(self.root.glob("*.html"))
+        files.extend(self.root.glob("*.css"))
         return files
 
     def _compute_hash(self, filepath: Path) -> str:
@@ -120,9 +121,9 @@ def lancer_serveur(watch=True):
     print(f"  MicroSolidaireNetwork - Serveur Dev - Port {PORT}")
     print(f"{'=' * 50}")
 
-    site_dir = PROJECT_ROOT / "site" / "site2_0-chatgpt"
+    site_dir = PROJECT_ROOT / "UI"
     os.chdir(site_dir)
-    url = f"http://localhost:{PORT}/index.htm"
+    url = f"http://localhost:{PORT}/index.html"
 
     watcher = None
     if watch:

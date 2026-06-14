@@ -1,0 +1,7 @@
+# Micro Solidaire Network — Site Internet
+#
+# Aucune dépendance externe.
+# Le serveur de développement (run.py) utilise uniquement la
+# bibliothèque standard de Python 3 (http.server, socketserver, threading…).
+#
+# Prérequis : Python 3.8 ou supérieur.

@@ -31,6 +31,9 @@ logs/*.log
 notes_persos/*
 !notes_persos/.gitkeep
 
+# Configuration locale Claude Code (chemins machine, prive)
+.claude/
+
 # Archives (garder le dossier)
 !archives/.gitkeep
 

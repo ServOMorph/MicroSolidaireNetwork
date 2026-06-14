@@ -4,7 +4,7 @@
 ---
 meta:
   stat: dev
-  prog: 86
+  prog: 87
   phase: 5
   maj: 2026-06-14
   goal: "Site internet complet pour le projet Micro Solidaire Network"
@@ -46,6 +46,7 @@ S[2026-03-23]|O:maquettes+ajustements|F:SITE3_COMET_ajout,fix_404_chatgpt,icones
 S[2026-06-14]|O:open_source+présentation|F:LICENSE,CONTRIBUTING,requirements,README_enrichi,repo_nettoyé,sections_contenu(qui-sommes-nous+rejoindre+contact),Inter_chargée,hero_recadré,edge_headless_screenshot|B:none|N:favicon+og_image+deploy
 S[2026-06-14b]|O:textes_projet+icones|F:textes_adaptés(projet_vs_asso),header_sticky,tagline_header,bouton_hero_supprimé,icones_aquarelle_x7,PROMPTS_ICONES.md|B:none|N:favicon+og_image+deploy
 S[2026-06-14c]|O:textes_je+inclusif+section_besoins|F:première_personne_singulier,écriture_inclusive,section_mes_besoins,onglet_nav,prompts_icones_x2,CLAUDE.md_directives|B:none|N:générer_icones_besoins+favicon+og_image+deploy
+S[2026-06-14d]|O:texte_outils_responsables+icones_besoins|F:paragraphe_outils_numeriques_responsables+IA_ethiques(section_projet),icone-constituer-bureau.png,icone-lieu-qg.png,wording_libourne|B:none|N:integrer_icones_besoins+favicon+og_image+deploy
 
 ## LOG
 # Format: TYPE|ID|DATE|PRIO|DESC|ETAT
@@ -94,3 +95,6 @@ DEP|google_fonts|runtime|L|Poppins+Lato+Caveat+Inter via CDN Google Fonts|actif
 [2026-06-14] +add style.css styles section .needs (grid 2 colonnes + cards)
 [2026-06-14] +add PROMPTS_ICONES.md prompts icones-constituer-bureau + icone-lieu-qg
 [2026-06-14] +add CLAUDE.md directives UI (première personne singulier + écriture inclusive)
+[2026-06-14] +add index.htm paragraphe outils numériques responsables + IA éthiques (section Le projet)
+[2026-06-14] +add assets/img icone-constituer-bureau.png + icone-lieu-qg.png (section mes-besoins)
+[2026-06-14] ~mod README.md + contact wording "Autour de Libourne (Gironde)"

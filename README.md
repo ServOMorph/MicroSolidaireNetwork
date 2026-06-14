@@ -5,7 +5,7 @@
 ![Statut](https://img.shields.io/badge/statut-en%20développement-orange)
 ![Stack](https://img.shields.io/badge/stack-HTML%20·%20CSS%20·%20JS-lightgrey)
 
-> Projet de création d'une association loi 1901 · Libourne (Gironde) & en ligne
+> Projet de création d'une association loi 1901 · Autour de Libourne (Gironde)
 > Communauté solidaire de micro-entrepreneurs pour un numérique responsable et une IA éthique.
 
 ---

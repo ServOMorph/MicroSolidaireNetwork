@@ -120,9 +120,9 @@ def lancer_serveur(watch=True):
     print(f"  MicroSolidaireNetwork - Serveur Dev - Port {PORT}")
     print(f"{'=' * 50}")
 
-    site_dir = PROJECT_ROOT / "site"
+    site_dir = PROJECT_ROOT / "site" / "site2_0-chatgpt"
     os.chdir(site_dir)
-    url = f"http://localhost:{PORT}/choix.html"
+    url = f"http://localhost:{PORT}/index.htm"
 
     watcher = None
     if watch:

@@ -1,0 +1,26 @@
+# Micro Solidaire Network
+
+Site internet statique de Micro Solidaire Network, un projet d'association loi 1901 à Libourne (Gironde) visant à fédérer les micro-entrepreneurs et indépendants autour d'un numérique responsable et d'une IA éthique.
+
+## Informations clés
+- **Stack** : HTML5 / CSS3 / JavaScript (vanilla) pour l'interface utilisateur, Python 3 (bibliothèque standard) pour le serveur de développement.
+- **Dépendances** : Aucune dépendance externe.
+- **Licence** : MIT (Copyright 2026 ServOMorph).
+- **Objectifs du projet** :
+  - Rompre l'isolement des indépendants à travers un réseau d'entraide.
+  - Promouvoir des outils numériques respectueux de la vie privée et sobres en ressources.
+  - Intégrer l'intelligence artificielle comme assistant des personnes, sans remplacer l'entraide humaine.
+  - Résoudre les besoins immédiats : constitution d'un bureau (recherche de 2 membres) et recherche d'un local/QG à Libourne.
+
+## Architecture
+Le projet est conçu de manière minimaliste et sans framework :
+- `run.py` : Serveur HTTP de développement local sur le port 4019 avec un système d'auto-reload passif.
+- `UI/` : Répertoire contenant la landing page.
+  - `UI/index.html` : Page d'accueil, nos activités, mes besoins, rejoindre, contact.
+  - `UI/style.css` : Styles CSS avec import de la police Inter.
+  - `UI/assets/img/` : Images d'illustration et icônes aquarelles.
+- `docs/` : Documents internes du projet (charte graphique, communication).
+
+## Principes d'écriture de l'UI
+- **Première personne du singulier** (*je, ma, mes, moi*) : Le projet étant porté par une seule personne, toute l'UI utilise ce point de vue.
+- **Écriture inclusive** : Utilisation systématique du point médian (`·`) pour les termes genrés dans l'UI (ex: *entrepreneur·e·s*, *indépendant·e·s*).
